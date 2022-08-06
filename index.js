@@ -12,7 +12,7 @@ const users=[
     {id:2,name:'molim',email:'molim@gmail.com',phone:'11024544a'},
     {id:3,name:'olim',email:'olim@gmail.com',phone:'11024544a'},
     {id:4,name:'alim',email:'alim@gmail.com',phone:'11024544a'},
-]
+];
 
 
 // react application thake data pawar jonno post korte hobe
@@ -20,8 +20,9 @@ const users=[
 app.post('/users',(req,res)=>{
      const newUsers=req.body;
      newUsers.id=users.length;
-     users.push=newUsers;
+     users.push(newUsers)
     res.json(newUsers);
+    console.log(newUsers)
         console.log('hitting the post',req.body);
     // res.send(JSON.stringify(newUsers))
 })
